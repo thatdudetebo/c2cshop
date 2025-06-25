@@ -54,7 +54,6 @@ $result = $conn->query($sql);
                     <img src="<?php echo htmlspecialchars($row['image'] ?: 'https://via.placeholder.com/200x200?text=No+Image'); ?>" alt="<?php echo htmlspecialchars($row['name']); ?>">
                     <h3><?php echo htmlspecialchars($row['name']); ?></h3>
                     <p><?php echo htmlspecialchars(substr($row['description'], 0, 100)) . '...'; ?></p>
-                    <p>Available: <?php echo htmlspecialchars($row['quantity']); ?> units</p>
                     <p>Seller: <?php echo htmlspecialchars($row['username']); ?></p>
                     <div class="price">$<?php echo number_format($row['price'], 2); ?></div>
                     <a href="product.php?id=<?php echo $row['id']; ?>" class="view-details-btn">View Details</a>
